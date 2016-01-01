@@ -4,9 +4,8 @@ Combines the power of redux middleware and @gaearon's
 relational, nested data a snap.
 
 Use with [redux-thunk](https://github.com/gaearon/redux-thunk) or
-[redux-promise-middleware](https://github.com/pburtchaell/redux-promise-
-middleware) to easily request and store your API's response in a
-database-like fashion in your redux apps!
+[redux-promise-middleware](https://github.com/pburtchaell/redux-promise- middleware)
+to easily request and store your API's response in a database-like fashion in your redux apps!
 
 For an example of a more manual implementation, check out [the
 real-world example in redux](https://github.com/rackt/redux/tree/master/examples/real-world)
@@ -17,13 +16,14 @@ real-world example in redux](https://github.com/rackt/redux/tree/master/examples
 ## Usage
 Place this middleware before anything that expects flattened
 data, and after anything that makes the nested data available (so before
-something like [redux-thunk] or [redux-promise-middleware]).
+something like redux-thunk or redux-promise-middleware).
 
 redux-normalizr-middleware assumes that your actions comply with FSA and
 that your nested data is available as the `payload` property in your
 action, and will normalize and store the flattened data in the same
 `payload` property. Opt into redux-normalizr-middleware by supplying a
-[normalizr schema] as `schema` in your action's `meta` object.
+[normalizr schema](https://github.com/gaearon/normalizr#usage) as
+`schema` in your action's `meta` object.
 
 ## Example
 ```js
