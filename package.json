@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "babel index.js -o lib.js",
-    "prepublish": "npm run build",
+    "prepublish": "npm test && npm run build",
     "test": "babel-node test.js |faucet"
   },
   "keywords": [

@@ -1,7 +1,6 @@
 import tap, { test } from 'tap';
 import { createStore, applyMiddleware } from 'redux';
 import { Schema, arrayOf } from 'normalizr';
-import sinon from 'sinon';
 
 import normalizrMiddleware from './index';
 
