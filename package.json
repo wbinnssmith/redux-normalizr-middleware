@@ -1,0 +1,34 @@
+{
+  "name": "redux-normalizr-middleware",
+  "version": "1.0.0",
+  "description": "Combines redux middleware and normalizr to make flattening nested data a snap",
+  "main": "lib.js",
+  "repository": "github:wbinnssmith/redux-normalizr-middleware",
+  "files": [
+    "README.md",
+    "lib.js"
+  ],
+  "scripts": {
+    "build": "babel index.js -o lib.js",
+    "prepublish": "npm run build",
+    "test": "babel-node test.js |faucet"
+  },
+  "keywords": [
+    "normalizr",
+    "redux",
+    "redux-middleware"
+  ],
+  "author": "Will Binns-Smith <wbinnssmith@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13",
+    "faucet": "0.0.1",
+    "redux": "^3.0.5",
+    "tap": "^4.0.0"
+  },
+  "dependencies": {
+    "normalizr": "^1.4.0",
+    "object-assign": "^4.0.1"
+  }
+}
