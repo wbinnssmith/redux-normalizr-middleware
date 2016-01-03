@@ -4,7 +4,7 @@ Combines the power of redux middleware and @gaearon's
 relational, nested data a snap.
 
 Use with [redux-thunk](https://github.com/gaearon/redux-thunk) or
-[redux-promise-middleware](https://github.com/pburtchaell/redux-promise- middleware)
+[redux-promise-middleware](https://github.com/pburtchaell/redux-promise-middleware)
 to easily request and store your API's response in a database-like fashion in your redux apps!
 
 For an example of a more manual implementation, check out [the
