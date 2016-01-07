@@ -1,5 +1,5 @@
 # redux-normalizr-middleware
-Combines the power of redux middleware and @gaearon's
+Combines the power of redux middleware and [@gaearon](https://github.com/gaearon)'s
 [normalizr](https://github.com/gaearon/normalizr) to make flattening
 relational, nested data a snap.
 
