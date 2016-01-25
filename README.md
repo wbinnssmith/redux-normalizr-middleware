@@ -27,7 +27,7 @@ action, and will normalize and store the flattened data in the same
 
 ## Example
 ```js
-  import normalizrMiddleware from 'redux-normalize-middleware';
+  import normalizrMiddleware from 'redux-normalizr-middleware';
 
   // import a schema defined using normalizr's `Schema`s to apply
   // to the response

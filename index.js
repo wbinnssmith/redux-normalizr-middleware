@@ -1,5 +1,5 @@
 import { normalize } from 'normalizr';
-import assign from 'object-assign';
+import assign from 'lodash/assign';
 
 export default function normalizrMiddleware() {
   return store => next => action => {
