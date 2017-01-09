@@ -1,6 +1,6 @@
 import tap, { test } from 'tap';
 import { createStore, applyMiddleware } from 'redux';
-import { Schema, arrayOf } from 'normalizr';
+import { schema } from 'normalizr';
 
 import normalizrMiddleware from './index';
 
@@ -9,21 +9,21 @@ function mergeReducer(state = {}, action) {
 }
 
 // from the normalizr readme
-const article = new Schema('articles');
-const user = new Schema('users');
-const collection = new Schema('collections');
+const article = new schema.Entity('articles');
+const user = new schema.Entity('users');
+const collection = new schema.Entity('collections');
 
 article.define({
   author: user,
-  collections: arrayOf(collection)
+  collections: [collection]
 });
 
 collection.define({
   curator: user
 });
 
-const schema = {
-  articles: arrayOf(article)
+const articlesSchema = {
+  articles: [article]
 };
 
 const response = {
@@ -83,7 +83,7 @@ test('normalizes payload with FSA defaults', t => {
     type: 'FOO',
     payload: response,
     meta: {
-      schema
+      schema: articlesSchema
     }
   })
 
@@ -96,7 +96,7 @@ test('action is unmodified before middleware', t => {
     type: 'FOO',
     payload: response,
     meta: {
-      schema
+      schema: articlesSchema
     }
   };
 
@@ -120,7 +120,7 @@ test('preserves other action properties when normalizing', t => {
     type: 'FOO',
     payload: response,
     meta: {
-      schema,
+      schema: articlesSchema,
       some: 'other',
       meta: 'data'
     }
